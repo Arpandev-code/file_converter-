@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/">
+  <!-- <base href="/"> -->
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -31,66 +31,8 @@
 
   <title>flutter_app_test</title>
   <link rel="manifest" href="manifest.json">
-
-  <style>
-    .loading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(135deg, #e0e7ff 0%, #ffffff 50%, #f3e8ff 100%);
-    }
-    .loading-text {
-      font-family: Arial, sans-serif;
-      font-size: 24px;
-      color: #4f46e5;
-      text-align: center;
-    }
-    .loading-spinner {
-      width: 50px;
-      height: 50px;
-      border: 5px solid #e0e7ff;
-      border-top: 5px solid #4f46e5;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-bottom: 20px;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
 </head>
 <body>
-  <div id="loading" class="loading">
-    <div>
-      <div class="loading-spinner"></div>
-      <div class="loading-text">Loading Image Converter...</div>
-    </div>
-  </div>
-
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-            // Hide loading indicator after app is loaded
-            document.getElementById('loading').style.display = 'none';
-          });
-        }
-      });
-    });
-  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
